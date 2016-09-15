@@ -3,58 +3,211 @@
   <head>
     <meta charset="utf-8">
     <title>Wylliam Judd</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <style media="screen">
-      body {
-        background: black;
-        font-family:sans-serif;
+      a {
+        color: inherit;
+        text-decoration: none;
       }
       img {
         height: 50px;
-        width: auto;
+        width: 50px;
+        object-fit: cover;
+        border-radius: 6px;
+        margin-right: 6px;
+      }
+      .narrow {
+        width: 40px;
+      }
+      ul {
+        padding: 0 12pt;
+        margin: 0 3pt;
+      }
+      body {
+        font-family: 'Roboto', sans-serif;
       }
       .page {
         width: 6.5in;
-        height: 10.5in;
+        height: 10;
         padding: .5in 1in;
-        background: white;
+        background: ivory;
+        color: #222;
       }
-      .header {
-        font-size: 24pt;
-        text-align: center;
-        margin-bottom: 12pt;
+      .title {
+        font-size: 22pt;
+        line-height: 30pt;
         font-weight: normal;
+        text-align: center;
+      }
+      .icons {
+        justify-content: space-between;
+        margin-bottom: 12pt;
       }
       .skills {
-        display: flex;
+        background: #222;
+        color: ivory;
         justify-content: space-between;
-        flex-wrap: wrap;
+        align-items: center;
+        white-space: nowrap;
+        height: 870px;
+        display:block;
+        text-align: center;
+        border-radius: 0 6px 0 0;
+      }
+      .body {
+        height: 100%;
+      }
+      .content {
+        height: 100%;
+        width: 500px;
+        float: left;
+        background: ivory;
+      }
+      .label {
+        background: #222;
+        color: ivory;
+        padding: 6pt;
+        font-weight: bold;
+        margin-top: 12pt;
+        display: block;
+        border-radius: 6px 0 0 0;
+      }
+      .top {
+        margin-top: 0;
+      }
+      .item {
+        margin-left: 3pt;
+        padding: 12pt 12pt 0 1pt;
+        line-height: 18pt;
+      }
+      .item-header {
+        display: block;
+      }
+      .header {
+        justify-content: space-around;
+        height: auto;
+        width: auto;
+        margin: auto;
+        margin-bottom: 12pt;
+      }
+      .contact {
+        text-align: center;
       }
       .skill {
-        color: black;
-        border-radius: 6pt;
-        padding: 6pt;
-        font-size: 14pt;
+        margin: 14pt 0;
+      }
+      .skills-title {
+        display: block;
+        padding: 12pt 0;
+      }
+      .skill-line {
+        width: 90px;
+      }
+      .title-line {
+        width: 400px;
+      }
+      .extra-narrow {
+        width: 35px;
+        margin-right: 9px;
       }
     </style>
   </head>
   <body>
-    <div class="page">
-      <h1 class="header">Wylliam Judd</h1>
-      <div class="skills">
-        <!-- <img src="ruby.svg"/> -->
-        <div class="skill">Ruby</div><div class="skill">&bull;</div>
-        <div class="skill">Ruby on Rails</div><div class="skill">&bull;</div>
-        <div class="skill">RSpec</div><div class="skill">&bull;</div>
-        <div class="skill">SQL</div>
+    <a href="resume.pdf"><div class="page">
+      <div class="header">
+        <div class="title">Wylliam Judd &bull; Full Stack Developer</div>
+        <hr class="title-line">
+        <div class="contact">wylliamjudd@gmail.com &bull; 415-604-6641</div>
       </div>
-      <div class="skills">
-        <div class="skill">JavaScript</div><div class="skill">&bull;</div>
-        <div class="skill">jQuery</div><div class="skill">&bull;</div>
-        <div class="skill">React</div><div class="skill">&bull;</div>
-        <div class="skill">Flux</div><div class="skill">&bull;</div>
-        <div class="skill">HTML5</div><div class="skill">&bull;</div>
-        <div class="skill">CSS3</div>
+      <div class="icons">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/1024px-Ruby_logo.svg.png"/>
+        <img class="narrow" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Ruby_on_Rails.svg/791px-Ruby_on_Rails.svg.png"/>
+        <img src="http://www.taylormath.com/wp-content/uploads/2015/06/rspec.png"/>
+        <img class="narrow" src="http://assets.toptal.io/uploads/blog/category/logo/60/sql.png"/>
+        <img src="https://worldvectorlogo.com/logos/javascript.svg"/>
+        <img src="http://www.hashin.in/hash/_layout/images/expertise/jquery.gif"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/React.js_logo.svg"/>
+        <img src="http://yycjs.com/real-world-react/img/flux-logo.png"/>
+        <img class="narrow" src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png"/>
+        <img class="extra-narrow" src="http://logo-png.com/logos/css3-logo.png"/>
+        <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"/>
       </div>
-    </div>
+      <div class="body">
+        <div class="content">
+          <div class="top label">Projects</div>
+          <div class="item">
+            <a href="https://collectize.herokuapp.com/"><div class="item-header"><b>Collectize</b> | Full Stack</div>
+            Single page web app built on Ruby on Rails with React.
+            <ul>
+              <li>Flux pattern and Restful APIs for a fluid user experience.
+              <li>Join tables allow user defined characteristics on collections.
+              <li>SQL metaprogramming enables advanced filters.
+            </ul>
+          </div></a>
+          <div class="item">
+            <a href="https://winterblack.github.io/Word-Chain/"><div class="item-header"><b>Word Chains</b> | Front End</div>
+            Native Javascript app finds the shortest chain between two words.
+            <ul>
+              <li>Uses Polytree breadth first search to find shortest chain.
+              <li>Intelligently loads word tree for best performance.
+            </ul>
+          </div></a>
+          <div class="item">
+            <a href="https://github.com/winterblack/Chess"><div class="item-header"><b>Chess</b> | Object Oriented Programming</div>
+            <ul>
+              <li>Beautiful DRY code using Polymorphic Inheritance.
+              <li>Classes use public API with encapsulated internal logic.
+              <li>Dependency Inversion Principle keeps all code elegant and easy to change and understand.
+            </ul>
+          </div></a>
+          <div class="label">Education</div>
+          <div class="item">
+            <div class="item-header"><b>App Academy</b> | 2016</div>
+            <ul>
+              <li>Completed rigorous 1000 hour course independently.
+              <li>Curriculum focuses on coding best-practices including Object Oriented Programming, Agile Development, Test Driven Development, Data Structures and Algorithms.
+            </ul>
+          </div>
+          <div class="item">
+            <div class="item-header"><b>Sarah Lawrence College</b> | 2002 - 2007</div>
+            Courses of study include robotics, neuroscience, and 3D modeling.
+          </div>
+          <div class="label">Work</div>
+          <div class="item">
+            <div class="item-header"><b>ESL Teacher in Korea</b> | 2012 - 2015</div>
+            Developed engaging curriculum for students ages 6 to 60.
+          </div>
+          <div class="item">
+            <div class="item-header"><b>Farm Generalist</b> | 2011 - 2012</div>
+            Established and maintained relationships with clients to grow sales from less than $50k/year to $250k/year within two years.
+          </div>
+        </div>
+        <div class="skills">
+          <b class="skills-title">Skills</b>
+          <hr class="skill-line">
+          <div class="skill">Ruby</div>
+          <div>&bull;</div>
+          <div class="skill">Ruby on Rails</div>
+          <div>&bull;</div>
+          <div class="skill">RSpec</div>
+          <div>&bull;</div>
+          <div class="skill">SQL</div>
+          <div>&bull;</div>
+          <div class="skill">JavaScript</div>
+          <div>&bull;</div>
+          <div class="skill">jQuery</div>
+          <div>&bull;</div>
+          <div class="skill">React</div>
+          <div>&bull;</div>
+          <div class="skill">Flux</div>
+          <div>&bull;</div>
+          <div class="skill">HTML5</div>
+          <div>&bull;</div>
+          <div class="skill">CSS3</div>
+          <div>&bull;</div>
+          <div class="skill">Git</div>
+        </div>
+      </div>
+    </div></a>
   </body>
 </html>
