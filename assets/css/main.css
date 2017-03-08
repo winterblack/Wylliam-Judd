@@ -3922,7 +3922,7 @@
 
 .resume-icon {
 	height: 50px;
-	width: 50px;
+	width: auto;
 	object-fit: cover;
 	border-radius: 6px;
 }
